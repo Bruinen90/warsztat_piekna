@@ -1,0 +1,201 @@
+* {
+  box-sizing: border-box;
+  font-family: Raleway;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@keyframes slideHorizontal {
+  to {
+    transform: translateX(10px);
+  }
+}
+.navbar__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  padding-left: 30px;
+}
+
+.navbar__logo {
+  width: 50%;
+  align-self: center;
+}
+
+.navbar__menuTogglerCont {
+  width: 30%;
+  height: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar__menuToggler {
+  width: 40px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navbar__menuBar {
+  width: 75%;
+  height: 3px;
+  background-color: #fff;
+}
+
+.navbar__menuBar--2 {
+  width: 100%;
+}
+
+.menu__container {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  transform: translateY(calc(-100% - 100px));
+  transition: all 0.25s ease-out;
+}
+
+.menu__container--active {
+  transform: translateY(0);
+}
+
+.menu__list {
+  width: 100%;
+  min-height: 75%;
+  background-color: #000;
+  margin: 0;
+  color: #fff;
+  list-style: none;
+  padding: 15px 30px;
+  padding-bottom: 45px;
+  font-size: 22px;
+}
+
+.menu__item {
+  margin: 15px 0;
+}
+
+.menu__item--sub {
+  font-size: 0.8em;
+  padding-left: 20px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.menu__item--pink {
+  color: #e71682;
+  font-weight: 600;
+}
+
+.welcome__container {
+  position: relative;
+}
+
+.welcome__heroCont {
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+}
+
+.welcome__hero {
+  height: 260px;
+}
+
+.welcome__header {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 260px;
+  font-size: 40px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.welcome__withUnderline {
+  position: relative;
+}
+
+.welcome__withUnderline::after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 6px;
+  width: 38%;
+  height: 5px;
+  background-color: #e71682;
+}
+
+.welcome__text {
+  line-height: 24px;
+  font-weight: 400;
+  padding: 30px;
+  padding-right: 45px;
+}
+
+.welcome__linkCont {
+  padding: 30px;
+}
+
+.linkWithArrow__cont {
+  display: flex;
+  align-items: center;
+}
+
+.linkWithArrow__text {
+  font-weight: 600;
+  margin-right: 15px;
+}
+
+.linkWithArrow__arrow {
+  animation: slideHorizontal 1s infinite alternate;
+}
+
+.makeAppointment__container {
+  background-color: #e71682;
+  height: 230px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 45px;
+}
+
+.makeAppointment__link {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.makeAppointment__linkText {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.makeAppointment__dotsGrid {
+  width: 50%;
+  height: 100%;
+  border: 1px solid white;
+}
+
+/*# sourceMappingURL=style.css.map */

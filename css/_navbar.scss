@@ -1,0 +1,39 @@
+.navbar__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    padding-left: 30px;
+}
+
+.navbar__logo {
+    width: 50%;
+    align-self: center;
+}
+
+.navbar__menuTogglerCont {
+    width: 30%;
+    height: 100%;
+    background-color: $color--black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar__menuToggler {
+    width: 40px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.navbar__menuBar {
+    width: 75%;
+    height: 3px;
+    background-color: #fff;
+}
+
+.navbar__menuBar--2 {
+    width: 100%;
+}

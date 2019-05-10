@@ -1,0 +1,29 @@
+.makeAppointment__container {
+    background-color: $color--pink;
+    height: 230px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 45px;
+}
+
+.makeAppointment__link {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.makeAppointment__linkText {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.makeAppointment__dotsGrid {
+    width: 50%;
+    height: 100%;
+    border: 1px solid white;
+}

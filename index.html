@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pl" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:200,400,600,900" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Warsztat piękna</title>
+    </head>
+    <body>
+        <main class="main__container">
+
+            <nav class="navbar__container">
+                <img src="img/logo.png" alt="Warsztat piękna" class="navbar__logo" />
+                <div class="navbar__menuTogglerCont">
+                    <div class="navbar__menuToggler" onclick="toggleMenu()">
+                        <div class="navbar__menuBar navbar__menuBar--1"></div>
+                        <div class="navbar__menuBar navbar__menuBar--2"></div>
+                        <div class="navbar__menuBar navbar__menuBar--3"></div>
+                    </div>
+                </div>
+
+                <div class="menu__container">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            Strona główna
+                        </li>
+                        <li class="menu__item">
+                            Oferta
+                            <li class="menu__item menu__item--sub">
+                                Zabiegi na twarz i ciało
+                            </li>
+                            <li class="menu__item menu__item--sub">
+                                Makijaż permanentny
+                            </li>
+                            <li class="menu__item menu__item--sub">
+                                Manicure i pedicure
+                            </li>
+                            <li class="menu__item menu__item--sub">
+                                Laseroterapia-Laser
+                            </li>
+                        </li>
+                        <li class="menu__item">
+                            IPL
+                            <li class="menu__item menu__item--sub">
+                                Pielęgnacja oczu
+                            </li>
+                            <li class="menu__item menu__item--sub">
+                                Depilacja woskiem
+                            </li>
+                            <li class="menu__item menu__item--sub">
+                                Dla mężczyzn
+                            </li>
+                        </li>
+                        <li class="menu__item menu__item--pink">
+                            Promocje
+                        </li>
+                    </ul>
+                </div>
+
+            </nav>
+
+            <section class="welcome__container">
+                <div class="welcome__heroCont">
+                    <img src="img/hero.png" class="welcome__hero">
+                </div>
+                <div class="welcome__textCont">
+                    <h1 class="welcome__header">
+                        <div class="welcome__withUnderline">Warsztat</div>
+                        piękna wita
+                    </h1>
+                    <div class="welcome__text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur molestias modi aperiam fugit rerum sit, commodi atque quia dolorem enim.
+                    </div>
+                    <div class="welcome__linkCont">
+                        <div class="linkWithArrow__cont">
+                            <a href="offer.html" class="linkWithArrow__text">
+                                Sprawdź ofertę
+                            </a>
+                            <img src="img/icons/arrow.svg" alt="⭢" class="linkWithArrow__arrow">
+                        </div>
+                    </div>
+                    <div class="welcome__makeAppointmentCont">
+                        <div class="makeAppointment__container">
+                            <a class="makeAppointment__link">
+                                <div class="makeAppointment__linkText">
+                                    Umów <br />się
+                                </div>
+                                <img src="img/icons/arrow_white.svg" alt="" class="makeAppointment__arrow">
+                            </a>
+                            <div class="makeAppointment__dotsGrid"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <script type="text/javascript" src="js/menu.js"> </script>
+    </body>
+</html>

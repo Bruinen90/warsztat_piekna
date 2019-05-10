@@ -1,0 +1,13 @@
+.linkWithArrow__cont {
+    display: flex;
+    align-items: center;
+}
+
+.linkWithArrow__text {
+    font-weight: 600;
+    margin-right: 15px;
+}
+
+.linkWithArrow__arrow {
+    animation: slideHorizontal 1s infinite alternate;
+}

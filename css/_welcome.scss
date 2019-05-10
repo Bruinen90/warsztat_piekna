@@ -1,0 +1,52 @@
+.welcome__container {
+    position: relative;
+}
+
+.welcome__heroCont {
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+}
+
+.welcome__hero {
+    height: 260px;
+}
+
+.welcome__header {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 260px;
+    font-size: 40px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.welcome__withUnderline {
+    position: relative;
+}
+
+.welcome__withUnderline::after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 6px;
+    width: 38%;
+    height: 5px;
+    background-color: $color--pink;
+}
+
+.welcome__text {
+    line-height: 24px;
+    font-weight: 400;
+    padding: 30px;
+    padding-right: 45px;
+}
+
+.welcome__linkCont {
+    padding: 30px;
+}

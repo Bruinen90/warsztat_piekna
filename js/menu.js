@@ -1,6 +1,6 @@
 const toggleMenu = () => {
     const menuCont = document.querySelector('.menu__container');
-    menuCont.classList.toggle('menu__container--active')
+    const menuToggler = document.querySelector('.navbar__menuToggler');
+    menuCont.classList.toggle('menu__container--active');
+    menuToggler.classList.toggle('navbar__menuToggler--active');
 }
-
-console.log('test')

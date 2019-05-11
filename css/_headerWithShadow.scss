@@ -1,0 +1,44 @@
+.headerWithShadow {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 45px 30px;
+    margin: 60px 0;
+    position: relative;
+    &:after {
+        content: attr(data-shadowText);
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: -1;
+        font-size: 13vw;
+        line-height: 22vw;
+        opacity: .066;
+    }
+}
+
+.headerWithShadow__withUnderline {
+    position: relative;
+    &:after {
+        content: " ";
+        position: absolute;
+        right: 0;
+        bottom: 1px;
+        height: 2px;
+        width: 100%;
+        background-color: $color--pink;
+    }
+}
+
+@media (min-width: 768px) {
+    .headerWithShadow {
+        font-size: 40px;
+        margin: 30vh auto;
+        max-width: 1200px;
+        &:after {
+            font-size: 137px;
+            line-height: 200px;
+        }
+    }
+}

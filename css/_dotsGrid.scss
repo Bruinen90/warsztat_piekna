@@ -1,0 +1,31 @@
+.dotsGrid {
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+    position: relative;
+}
+
+.dotsGrid__dot {
+    width: 5px;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.dotsGrid__second {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.dotsGrid--pink {
+    display: none;
+}
+
+@media (min-width: $desktop--min--width) {
+    .dotsGrid--pink {
+        .dotsGrid__dot {
+            background-color: $color--pink;
+        }
+    }
+}

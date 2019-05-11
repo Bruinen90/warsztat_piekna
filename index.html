@@ -3,54 +3,102 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css?family=Raleway:200,400,600,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:200,400,600,700,900|Roboto" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
         <title>Warsztat piękna</title>
     </head>
     <body>
-        <main class="main__container">
+        <main class="global__content">
 
             <nav class="navbar__container">
                 <img src="img/logo.png" alt="Warsztat piękna" class="navbar__logo" />
                 <div class="navbar__menuTogglerCont">
                     <div class="navbar__menuToggler" onclick="toggleMenu()">
-                        <div class="navbar__menuBar navbar__menuBar--1"></div>
-                        <div class="navbar__menuBar navbar__menuBar--2"></div>
-                        <div class="navbar__menuBar navbar__menuBar--3"></div>
+                        <div class="navbar__menuBar" ></div>
+                        <div class="navbar__menuBar"></div>
+                        <div class="navbar__menuBar"></div>
                     </div>
                 </div>
 
                 <div class="menu__container">
                     <ul class="menu__list">
                         <li class="menu__item">
-                            Strona główna
+                            <div class="menu__item--main">
+                                <span>Strona główna</span>
+                            </div>
                         </li>
                         <li class="menu__item">
-                            Oferta
-                            <li class="menu__item menu__item--sub">
-                                Zabiegi na twarz i ciało
-                            </li>
-                            <li class="menu__item menu__item--sub">
-                                Makijaż permanentny
-                            </li>
-                            <li class="menu__item menu__item--sub">
-                                Manicure i pedicure
-                            </li>
-                            <li class="menu__item menu__item--sub">
-                                Laseroterapia-Laser
-                            </li>
-                        </li>
-                        <li class="menu__item">
-                            IPL
-                            <li class="menu__item menu__item--sub">
-                                Pielęgnacja oczu
-                            </li>
-                            <li class="menu__item menu__item--sub">
-                                Depilacja woskiem
-                            </li>
-                            <li class="menu__item menu__item--sub">
-                                Dla mężczyzn
-                            </li>
+                            <div class="menu__item--main">
+                                <span>Oferta</span>
+                            </div>
+                            <div class="menu__subMenuCont">
+                                <div class="menu__subMenu">
+                                    <div class="withLine withLine--pink">
+                                        <h6 class="menu__subHeader">
+                                            Gabinet kosmetyczny
+                                        </h6>
+                                    </div>
+                                    <div class="menu__subList">
+                                        <div class="menu__subItem">
+                                            Zabiegi na twarz i ciało
+                                        </div>
+                                        <div class="menu__subItem">
+                                            Makijaż permanentny
+                                        </div>
+                                        <div class="menu__subItem">
+                                            Manicure i pedicure
+                                        </div>
+                                        <div class="menu__subItem">
+                                            Laseroterapia - Laser IPL
+                                        </div>
+                                        <div class="menu__subItem">
+                                            Pielęgnacja oczu
+                                        </div>
+                                        <div class="menu__subItem">
+                                            Depilacja woskiem
+                                        </div>
+                                        <div class="menu__subItem">
+                                            Dla mężczyzn
+                                        </div>
+                                        <div class="menu__subItem">
+                                            Dla mężczyzn
+                                        </div>
+                                        <div class="menu__subItem menu__subItem--special">
+                                            Specjalne oferty
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="menu__subMenu menu__subMenu--desktop">
+                                    <div class="withLine">
+                                        <h6 class="menu__subHeader">
+                                            Oferta naturalnych kosmetyków
+                                        </h6>
+                                    </div>
+                                    <div class="menu__subList">
+                                        <div class="menu__subItem">
+                                            Pielęgnacja twarzy
+                                        </div>
+                                        <div class="menu__subItem">
+                                            Kremy i emulsje
+                                        </div>
+                                        <div class="menu__subItem">
+                                            Kremy BB
+                                        </div>
+                                        <div class="menu__subItem">
+                                            Makijaż
+                                        </div>
+                                        <div class="menu__subItem">
+                                            Ciało
+                                        </div>
+                                        <div class="menu__subItem">
+                                            Maseczki i peelingi
+                                        </div>
+                                        <div class="menu__subItem menu__subItem--special">
+                                            Promocje
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                         <li class="menu__item menu__item--pink">
                             Promocje
@@ -67,7 +115,7 @@
                 <div class="welcome__textCont">
                     <h1 class="welcome__header">
                         <div class="welcome__withUnderline">Warsztat</div>
-                        piękna wita
+                        piękna
                     </h1>
                     <div class="welcome__text">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur molestias modi aperiam fugit rerum sit, commodi atque quia dolorem enim.
@@ -88,13 +136,117 @@
                                 </div>
                                 <img src="img/icons/arrow_white.svg" alt="" class="makeAppointment__arrow">
                             </a>
-                            <div class="makeAppointment__dotsGrid"></div>
+                            <div class="makeAppointment__dotsCont">
+                                <div class="dotsGrid"></div>
+                                <div class="dotsGrid dotsGrid__second dotsGrid--pink"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
+
+            <h2 class="headerWithShadow" data-shadowText="celebruj z nami każdy dzień">
+                Hej! Zobacz co przygotowaliśmy dla
+                <span class="headerWithShadow__withUnderline">Ciebie!</span>
+            </h2>
+
+            <section class="welcomeOffer">
+                <div class="welcomeOffer__box">
+                    <div class="welcomeOffer__number">
+                        01
+                    </div>
+                    <h2 class="welcomeOffer__header">
+                        Zabiegi na twarz i ciało
+                    </h2>
+                    <p class="welcomeOffer__text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas aspernatur numquam nesciunt assumenda, similique inventore voluptates vel laborum mollitia quisquam.
+                    </p>
+                    <div class="welcomeOffer__imgCont">
+                        <img
+                            src="img/offer/01.png"
+                            class="welcomeOffer__img"
+                            alt=""
+                            title=""
+                        />
+                    </div>
+                    <a href="" class="welcomeOffer__moreLink">
+                        <span>Więcej</span>
+                        <img src="img/icons/arrow.svg" alt="" class="welcomeOffer__arrow">
+                    </a>
+                </div>
+                <div class="welcomeOffer__box">
+                    <div class="welcomeOffer__number">
+                        01
+                    </div>
+                    <h2 class="welcomeOffer__header">
+                        Zabiegi na twarz i ciało
+                    </h2>
+                    <p class="welcomeOffer__text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas aspernatur numquam nesciunt assumenda, similique inventore voluptates vel laborum mollitia quisquam.
+                    </p>
+                    <div class="welcomeOffer__imgCont">
+                        <img
+                            src="img/offer/01.png"
+                            class="welcomeOffer__img"
+                            alt=""
+                            title=""
+                        />
+                    </div>
+                    <a href="" class="welcomeOffer__moreLink">
+                        <span>Więcej</span>
+                        <img src="img/icons/arrow.svg" alt="" class="welcomeOffer__arrow">
+                    </a>
+                </div>
+                <div class="welcomeOffer__box">
+                    <div class="welcomeOffer__number">
+                        01
+                    </div>
+                    <h2 class="welcomeOffer__header">
+                        Zabiegi na twarz i ciało
+                    </h2>
+                    <p class="welcomeOffer__text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas aspernatur numquam nesciunt assumenda, similique inventore voluptates vel laborum mollitia quisquam.
+                    </p>
+                    <div class="welcomeOffer__imgCont">
+                        <img
+                            src="img/offer/01.png"
+                            class="welcomeOffer__img"
+                            alt=""
+                            title=""
+                        />
+                    </div>
+                    <a href="" class="welcomeOffer__moreLink">
+                        <span>Więcej</span>
+                        <img src="img/icons/arrow.svg" alt="" class="welcomeOffer__arrow">
+                    </a>
+                </div>
+                <div class="welcomeOffer__box">
+                    <div class="welcomeOffer__number">
+                        01
+                    </div>
+                    <h2 class="welcomeOffer__header">
+                        Zabiegi na twarz i ciało
+                    </h2>
+                    <p class="welcomeOffer__text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas aspernatur numquam nesciunt assumenda, similique inventore voluptates vel laborum mollitia quisquam.
+                    </p>
+                    <div class="welcomeOffer__imgCont">
+                        <img
+                            src="img/offer/01.png"
+                            class="welcomeOffer__img"
+                            alt=""
+                            title=""
+                        />
+                    </div>
+                    <a href="" class="welcomeOffer__moreLink">
+                        <span>Więcej</span>
+                        <img src="img/icons/arrow.svg" alt="" class="welcomeOffer__arrow">
+                    </a>
+                </div>
+            </section>
         </main>
 
-        <script type="text/javascript" src="js/menu.js"> </script>
+        <script type="text/javascript" src="js/menu.js"></script>
+        <script type="text/javascript" src="js/dotsGrid.js"></script>
     </body>
 </html>

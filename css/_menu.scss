@@ -13,6 +13,10 @@
     transform: translateY(0);
 }
 
+.menu__subMenu--desktop, .menu__subHeader {
+    display: none;
+}
+
 .menu__list {
     width: 100%;
     min-height: 75%;
@@ -29,14 +33,117 @@
     margin: 15px 0;
 }
 
-.menu__item--sub {
-    font-size: .8em;
-    padding-left: 20px;
+.menu__subList {
+    list-style: none;
     margin: 0;
+    margin-top: 15px;
+    padding: 0;
+    padding-left: 20px;
+}
+
+.menu__subItem {
+    font-size: .8em;
     margin-bottom: 10px;
 }
 
 .menu__item--pink {
     color: $color--pink;
     font-weight: 600;
+}
+
+@media (min-width: $desktop--min--width) {
+    .menu__container {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        z-index: auto;
+        transform: none;
+        width: 50%;
+    }
+
+    .menu__list {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        background-color: #fff;
+        color: #000;
+        padding: 0;
+        height: 100%;
+    }
+
+    .menu__item {
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding-top: 30px;
+    }
+
+    .menu__item--main {
+        position: relative;
+        z-index: 100;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+    }
+
+    .menu__item:hover{
+        .menu__item--main:after {
+            content: " ";
+            position: absolute;
+            bottom: -5px;
+            left: -15px;
+            width: calc(70% + 15px);
+            height: 5px;
+            background-color: $color--pink;
+        }
+        .menu__subMenuCont {
+            transform: translateY(100%);
+            opacity: 1;
+        }
+    }
+
+    .menu__subMenuCont {
+        position: absolute;
+        bottom: 0;
+        transform: translateY(-100%);
+        opacity: 0;
+        right: 0;
+        width: 75vw;
+        max-width: 1080px;
+        padding: 45px;
+        box-shadow: 0px 10px 15px $shadow-medium;
+        display: flex;
+        justify-content: space-between;
+        background-color: #fff;
+        z-index: 10;
+        transition: all .25s ease-out;
+    }
+
+    .menu__subMenu {
+        width: 47%;
+        text-align: left;
+    }
+
+    .menu__subMenu--desktop {
+        display: block;
+    }
+
+    .menu__subHeader {
+        font-weight: 600;
+        font-size: 22px;
+        display: inline-block;
+        margin: 0;
+        background-color: #fff;
+        padding: 5px;
+    }
+
+    .menu__subList {
+        padding: 0;
+        margin-top: 30px;
+        display: grid;
+        grid-template: auto / 1fr 1fr;
+        grid-gap: 15px;
+    }
 }

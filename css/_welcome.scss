@@ -50,3 +50,59 @@
 .welcome__linkCont {
     padding: 30px;
 }
+
+@media (min-width: $desktop--min--width) {
+    .welcome__container {
+        display: flex;
+        align-items: flex-end;
+        width: 100%;
+        min-height: 500px;
+    }
+
+    .welcome__heroCont {
+        right: 0;
+        left: 30%;
+        bottom: 0;
+        width: 70%;
+        overflow: hidden;
+    }
+
+    .welcome__hero {
+        width: 100%;
+        height: auto;
+    }
+
+    .welcome__textCont {
+        height: 100%;
+        width: 50%;
+    }
+
+    .welcome__header {
+        font-size: 80px;
+        margin: 0;
+        padding-bottom: 0;
+    }
+
+    .welcome__withUnderline::after {
+        bottom: 15px;
+        z-index: -1;
+        height: 8px;
+        width: 35%;
+    }
+
+    .welcome__text {
+        width: 50%;
+        padding-top: 0;
+    }
+
+    .welcome__linkCont {
+        padding-bottom: 0;
+    }
+
+    .welcome__makeAppointmentCont {
+        position: absolute;
+        right: 15%;
+        bottom: 0;
+        transform: translateY(125px);
+    }
+}

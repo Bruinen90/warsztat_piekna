@@ -9,6 +9,7 @@
 .navbar__logo {
     width: 50%;
     align-self: center;
+    position: relative;
 }
 
 .navbar__menuTogglerCont {
@@ -32,8 +33,35 @@
     width: 75%;
     height: 3px;
     background-color: #fff;
+    transition: all .25s ease-out;
+    transform-origin: left top;
+    &:nth-child(2n) {
+        width: 100%;
+    }
 }
 
-.navbar__menuBar--2 {
-    width: 100%;
+.navbar__menuToggler--active {
+    .navbar__menuBar:nth-child(2n) {
+        opacity: 0;
+    }
+    .navbar__menuBar:first-child {
+        transform: rotate(45deg) translateY(-5px);
+        width: 48px;
+    }
+
+    .navbar__menuBar:last-child {
+        transform: rotate(-45deg) translateY(5px);
+        width: 48px;
+    }
+}
+
+@media (min-width: $desktop--min--width) {
+    .navbar__logo {
+        width: 315px;
+        margin-bottom: -60px;
+    }
+
+    .navbar__menuTogglerCont {
+        display: none;
+    }
 }

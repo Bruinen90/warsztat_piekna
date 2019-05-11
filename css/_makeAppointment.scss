@@ -22,8 +22,31 @@
     font-weight: 600;
 }
 
+.makeAppointment__dotsCont {
+    margin-left: auto;
+}
+
 .makeAppointment__dotsGrid {
     width: 50%;
     height: 100%;
     border: 1px solid white;
+}
+
+@media (min-width: $desktop--min--width) {
+    .makeAppointment__container {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .makeAppointment__dotsCont {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        transform: translateY(50%);
+    }
 }

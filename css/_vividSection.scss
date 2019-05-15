@@ -1,4 +1,4 @@
-.makeAppointment__container {
+.vividSection__container {
     background-color: $color--pink;
     height: 230px;
     color: #fff;
@@ -7,7 +7,7 @@
     padding: 45px;
 }
 
-.makeAppointment__link {
+.vividSection__link {
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -15,25 +15,25 @@
     justify-content: center;
 }
 
-.makeAppointment__linkText {
+.vividSection__linkText {
     margin-bottom: 20px;
     text-align: center;
     font-size: 26px;
     font-weight: 600;
 }
 
-.makeAppointment__dotsCont {
+.vividSection__dotsCont {
     margin-left: auto;
 }
 
-.makeAppointment__dotsGrid {
+.vividSection__dotsGrid {
     width: 50%;
     height: 100%;
     border: 1px solid white;
 }
 
 @media (min-width: $desktop--min--width) {
-    .makeAppointment__container {
+    .vividSection__container {
         width: 250px;
         height: 250px;
         border-radius: 50%;
@@ -43,7 +43,7 @@
         align-items: center;
     }
 
-    .makeAppointment__dotsCont {
+    .vividSection__dotsCont {
         position: absolute;
         right: 0;
         bottom: 0;

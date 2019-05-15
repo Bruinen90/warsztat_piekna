@@ -1,0 +1,74 @@
+.holika {
+    text-align: center;
+}
+
+.holika__smallHeader {
+    font-weight: 500;
+    font-size: 20px;
+    color: $color--gray;
+    margin: 45px 0;
+}
+
+.holika__logo {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #d5d5d5;
+}
+
+.holika_imgCont {
+    width: 100%;
+    position: relative;
+    height: 311px;
+    overflow: hidden;
+    margin-bottom: 60px;
+}
+
+.holika__img {
+    width: 70%;
+    position: absolute;
+    &:first-child {
+        left: 0;
+        top: 0;
+    }
+
+    &:nth-child(2n) {
+        right: 0;
+        bottom: 0;
+    }
+}
+
+@media (min-width: $desktop--min--width) {
+    .holika__smallHeader {
+        font-size: 36px;
+        padding-bottom: 60px;
+        margin-bottom: 0;
+        position: relative;
+        &:after {
+            content: " ";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+            width: 210px;
+            height: 1px;
+            background-color: #ccc;
+        }
+    }
+
+    .holika__logo {
+        border: 0;
+        padding: 0;
+        width: 600px;
+        margin: 120px 0;
+    }
+
+    .holika_imgCont {
+        height: 45vw;
+        max-height: 648px;
+    }
+
+    .holika__img {
+        width: 55%;
+    }
+}

@@ -49,8 +49,87 @@
 
 @media (min-width: $desktop--min--width) {
     .welcomeOffer {
-        display: grid;
-        grid-template: 1fr 1fr / 1fr 1fr;
-        grid-gap: 7% 20%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .welcomeOffer__box {
+        margin-bottom: 180px;
+        grid-template: auto / 1fr 2fr;
+        width: 40%;
+        grid-row-gap: 30px;
+
+        .welcomeOffer__header {
+            font-size: 40px;
+            grid-row: 1;
+            grid-column-start: span 2;
+            padding: 0;
+        }
+
+        .welcomeOffer__number {
+            font-size: 101px;
+            display: flex;
+            align-items: center;
+            padding: 0;
+        }
+
+        .welcomeOffer__text {
+            grid-column-end: auto;
+            width: 75%;
+            padding: 0;
+        }
+
+        .welcomeOffer__moreLink {
+            grid-column-end: 3;
+            margin: -30px 0 60px 0;
+        }
+
+        .welcomeOffer__imgCont {
+            grid-row-start: 4;
+        }
+    }
+
+    .welcomeOffer__box:nth-child(2n) {
+        grid-template: auto / 1fr;
+        @mixin leftTextBox {
+            margin-left: 20%;
+            width: 60%;
+        }
+        .welcomeOffer__imgCont {
+            grid-row-start: 1;
+            margin-bottom: -80px;
+            z-index: -1;
+        }
+
+        .welcomeOffer__header {
+            grid-row-start: 2;
+            @include leftTextBox;
+        }
+
+        .welcomeOffer__number {
+            @include leftTextBox;
+        }
+
+        .welcomeOffer__text {
+            grid-row-start: 4;
+            @include leftTextBox;
+        }
+
+        .welcomeOffer__moreLink {
+            grid-row-start: 5;
+            grid-column-end: auto;
+            margin: 0;
+            @include leftTextBox;
+            width: 100px;
+        }
+    }
+
+    .welcomeOffer__box:last-child {
+        .welcomeOffer__header {
+            margin-top: 80px;
+        }
     }
 }

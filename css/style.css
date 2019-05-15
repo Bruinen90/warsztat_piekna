@@ -167,14 +167,13 @@ a {
     text-align: center;
     margin: 0;
     padding-top: 30px;
+    background-color: #fff;
   }
 
   .menu__item--main {
     position: relative;
     z-index: 100;
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
+    display: inline-block;
   }
 
   .menu__item:hover .menu__item--main:after {
@@ -356,7 +355,7 @@ a {
   animation: slideHorizontal 1s infinite alternate;
 }
 
-.makeAppointment__container {
+.vividSection__container {
   background-color: #e71682;
   height: 230px;
   color: #fff;
@@ -365,7 +364,7 @@ a {
   padding: 45px;
 }
 
-.makeAppointment__link {
+.vividSection__link {
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -373,25 +372,25 @@ a {
   justify-content: center;
 }
 
-.makeAppointment__linkText {
+.vividSection__linkText {
   margin-bottom: 20px;
   text-align: center;
   font-size: 26px;
   font-weight: 600;
 }
 
-.makeAppointment__dotsCont {
+.vividSection__dotsCont {
   margin-left: auto;
 }
 
-.makeAppointment__dotsGrid {
+.vividSection__dotsGrid {
   width: 50%;
   height: 100%;
   border: 1px solid white;
 }
 
 @media (min-width: 768px) {
-  .makeAppointment__container {
+  .vividSection__container {
     width: 250px;
     height: 250px;
     border-radius: 50%;
@@ -401,7 +400,7 @@ a {
     align-items: center;
   }
 
-  .makeAppointment__dotsCont {
+  .vividSection__dotsCont {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -550,9 +549,150 @@ a {
 
 @media (min-width: 768px) {
   .welcomeOffer {
-    display: grid;
-    grid-template: 1fr 1fr/1fr 1fr;
-    grid-gap: 7% 20%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .welcomeOffer__box {
+    margin-bottom: 180px;
+    grid-template: auto/1fr 2fr;
+    width: 40%;
+    grid-row-gap: 30px;
+  }
+  .welcomeOffer__box .welcomeOffer__header {
+    font-size: 40px;
+    grid-row: 1;
+    grid-column-start: span 2;
+    padding: 0;
+  }
+  .welcomeOffer__box .welcomeOffer__number {
+    font-size: 101px;
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+  .welcomeOffer__box .welcomeOffer__text {
+    grid-column-end: auto;
+    width: 75%;
+    padding: 0;
+  }
+  .welcomeOffer__box .welcomeOffer__moreLink {
+    grid-column-end: 3;
+    margin: -30px 0 60px 0;
+  }
+  .welcomeOffer__box .welcomeOffer__imgCont {
+    grid-row-start: 4;
+  }
+
+  .welcomeOffer__box:nth-child(2n) {
+    grid-template: auto/1fr;
+  }
+  .welcomeOffer__box:nth-child(2n) .welcomeOffer__imgCont {
+    grid-row-start: 1;
+    margin-bottom: -80px;
+    z-index: -1;
+  }
+  .welcomeOffer__box:nth-child(2n) .welcomeOffer__header {
+    grid-row-start: 2;
+    margin-left: 20%;
+    width: 60%;
+  }
+  .welcomeOffer__box:nth-child(2n) .welcomeOffer__number {
+    margin-left: 20%;
+    width: 60%;
+  }
+  .welcomeOffer__box:nth-child(2n) .welcomeOffer__text {
+    grid-row-start: 4;
+    margin-left: 20%;
+    width: 60%;
+  }
+  .welcomeOffer__box:nth-child(2n) .welcomeOffer__moreLink {
+    grid-row-start: 5;
+    grid-column-end: auto;
+    margin: 0;
+    margin-left: 20%;
+    width: 60%;
+    width: 100px;
+  }
+
+  .welcomeOffer__box:last-child .welcomeOffer__header {
+    margin-top: 80px;
+  }
+}
+.holika {
+  text-align: center;
+}
+
+.holika__smallHeader {
+  font-weight: 500;
+  font-size: 20px;
+  color: #777;
+  margin: 45px 0;
+}
+
+.holika__logo {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #d5d5d5;
+}
+
+.holika_imgCont {
+  width: 100%;
+  position: relative;
+  height: 311px;
+  overflow: hidden;
+  margin-bottom: 60px;
+}
+
+.holika__img {
+  width: 70%;
+  position: absolute;
+}
+.holika__img:first-child {
+  left: 0;
+  top: 0;
+}
+.holika__img:nth-child(2n) {
+  right: 0;
+  bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .holika__smallHeader {
+    font-size: 36px;
+    padding-bottom: 60px;
+    margin-bottom: 0;
+    position: relative;
+  }
+  .holika__smallHeader:after {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 210px;
+    height: 1px;
+    background-color: #ccc;
+  }
+
+  .holika__logo {
+    border: 0;
+    padding: 0;
+    width: 600px;
+    margin: 120px 0;
+  }
+
+  .holika_imgCont {
+    height: 45vw;
+    max-height: 648px;
+  }
+
+  .holika__img {
+    width: 55%;
   }
 }
 

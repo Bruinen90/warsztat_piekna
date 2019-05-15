@@ -49,4 +49,21 @@
         bottom: 0;
         transform: translateY(50%);
     }
+
+    .vividSection__inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+
+    .vividSection__dotsCont--pink {
+        z-index: -1;
+    }
 }

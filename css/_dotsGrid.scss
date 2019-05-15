@@ -24,6 +24,8 @@
 
 @media (min-width: $desktop--min--width) {
     .dotsGrid--pink {
+        display: grid;
+        z-index: -1;
         .dotsGrid__dot {
             background-color: $color--pink;
         }

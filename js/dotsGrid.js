@@ -5,6 +5,7 @@ const generateDots = () => {
         dotsGridHTML.push(dotHTML)
     }
     const grids = document.querySelectorAll('.dotsGrid');
+    console.log(grids)
     grids.forEach(grid => {
         grid.innerHTML = dotsGridHTML.join('')
     })

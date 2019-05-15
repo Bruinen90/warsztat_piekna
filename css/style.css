@@ -94,7 +94,7 @@ a {
   right: 0;
   bottom: 0;
   z-index: 10;
-  transform: translateY(calc(-100% - 100px));
+  transform: translateY(calc(-100% - 300px));
   transition: all 0.25s ease-out;
 }
 
@@ -406,6 +406,23 @@ a {
     bottom: 0;
     transform: translateY(50%);
   }
+
+  .vividSection__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+
+  .vividSection__dotsCont--pink {
+    z-index: -1;
+  }
 }
 .dotsGrid {
   display: grid;
@@ -432,6 +449,10 @@ a {
 }
 
 @media (min-width: 768px) {
+  .dotsGrid--pink {
+    display: grid;
+    z-index: -1;
+  }
   .dotsGrid--pink .dotsGrid__dot {
     background-color: #e71682;
   }
@@ -693,6 +714,10 @@ a {
 
   .holika__img {
     width: 55%;
+  }
+
+  .holika__makeAppointmentCont {
+    margin: -120px 0 0 120px;
   }
 }
 

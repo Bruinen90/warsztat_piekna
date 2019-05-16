@@ -7,6 +7,13 @@
     padding: 45px;
 }
 
+.vividSection__inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .vividSection__link {
     width: 50%;
     display: flex;
@@ -51,9 +58,8 @@
     }
 
     .vividSection__inner {
-        display: flex;
+        width: auto;
         justify-content: center;
-        align-items: center;
         position: absolute;
         left: 0;
         top: 0;

@@ -17,3 +17,17 @@ a {
     margin: auto;
     max-width: 1440px;
 }
+
+.capitalized {
+
+}
+
+.bigLetter {
+    display: inline-block;
+    font-size: 49px;
+    font-weight: 700;
+    float: left;
+    vertical-align: baseline;
+    line-height: 45px;
+    padding-right: 10px;
+}

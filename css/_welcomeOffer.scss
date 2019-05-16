@@ -33,18 +33,8 @@
 
 .welcomeOffer__moreLink {
     grid-column-end: span 2;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100px;
-    border-bottom: 1px solid #d9d9d9;
-    margin: 0 15px;
+    @include moreLink;
     margin-top: 30px;
-    .welcomeOffer__arrow {
-        margin-right: 10px;
-        height: .8em;
-        animation: slideHorizontal 1s infinite alternate;
-    }
 }
 
 @media (min-width: $desktop--min--width) {

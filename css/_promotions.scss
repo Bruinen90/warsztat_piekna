@@ -1,0 +1,134 @@
+.promotions {
+    margin: 90px 0;
+}
+
+.promotions__hero {
+    width: 100%;
+}
+
+.promotions__heroText {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0 20px;
+}
+
+.promotions__img {
+    position: relative;
+    width: 100%;
+    z-index: -1;
+    margin-top: -30px;
+}
+
+.promotions__header {
+    font-size: 50px;
+    font-weight: 200;
+    color: #9b9b9b;
+    padding: 0 30px;
+    margin-top: 90px;
+    margin-bottom: 60px;
+}
+
+.promotions__header--withUnderline {
+    font-weight: 500;
+    color: #000;
+    position: relative;
+    &:before {
+        content: " ";
+        position: absolute;
+        width: 82%;
+        height: 5px;
+        left: -5px;
+        bottom: 10px;
+        background-color: $color--pink;
+        z-index: -1;
+    }
+}
+
+.promotions__box {
+    margin: 30px 0;
+    padding: 20px;
+    font-family: $font--second;
+}
+
+.promotions__boxHeader {
+    font-size: 24px;
+    font-weight: lighter;
+    margin: 0;
+    font-family: inherit;
+}
+
+.promotions__boxText {
+    font-size: 15px;
+    font-weight: lighter;
+    line-height: 1.75rem;
+    font-family: inherit;
+    padding: 30px 0;
+    border-bottom: 1px solid #95989a;
+}
+
+.promotions__boxDateCont {
+    display: flex;
+    margin: 30px 0;
+    font-family: inherit;
+}
+
+.promotions__boxIcon {
+    margin-right: 30px;
+}
+
+.promotions__boxDate {
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.promotions__boxLink {
+    font-family: inherit;
+    @include moreLink;
+    margin-left: 0;
+}
+
+.promotions__vividCont {
+    margin: 45px 0;
+}
+
+@media (min-width: $desktop--min--width) {
+    .promotions {
+        margin-top: 300px;
+    }
+
+    .promotions__heroText {
+        font-size: 40px;
+        text-align: left;
+        width: 75%;
+        margin: auto;
+        line-height: 1.5em;
+    }
+
+    .promotions__imgCont {
+        margin-top: -200px;
+    }
+
+    .promotions__currentCont {
+        width: 80%;
+        margin: auto;
+    }
+
+    .promotions__header {
+        font-size: 110px;
+    }
+
+    .promotions__header--withUnderline {
+        &:before {
+            width: 38%;
+            bottom: 15px;
+            left: -25px;
+        }
+    }
+
+    .promotions__cont {
+        display: grid;
+        grid-template: auto / repeat(3, 1fr);
+        grid-gap: 90px;
+    }
+}

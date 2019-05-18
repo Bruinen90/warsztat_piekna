@@ -57,7 +57,8 @@
 
 @media (min-width: $desktop--min--width) {
     .navbar__logo {
-        width: 315px;
+        width: 20vw;
+        max-width: 315px;
         margin-bottom: -60px;
     }
 

@@ -41,8 +41,8 @@
 
 @media (min-width: $desktop--min--width) {
     .vividSection__container {
-        width: 250px;
-        height: 250px;
+        width: 180px;
+        height: 180px;
         border-radius: 50%;
         position: relative;
         display: flex;
@@ -71,5 +71,12 @@
 
     .vividSection__dotsCont--pink {
         z-index: -1;
+    }
+}
+
+@media (min-width: $big--desktop--min--width) {
+    .vividSection__container {
+        width: 250px;
+        height: 250px;
     }
 }

@@ -42,6 +42,10 @@
     }
 }
 
+.welcomeOffer__grid {
+    display: none;
+}
+
 .welcomeOffer__box:nth-child(2n) {
     .welcomeOffer__imgCont:after {
         left: 55%;
@@ -74,6 +78,18 @@
         flex-direction: row-reverse;
         justify-content: space-between;
         width: 100%;
+        position: relative;
+        &:after {
+            content: " ";
+            position: absolute;
+            bottom: 180px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            height: 120px;
+            width: 1px;
+            background-color: $color--gray;
+        }
     }
 
     .welcomeOffer__box {
@@ -138,6 +154,16 @@
         }
     }
 
+    .welcomeOffer__grid {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 20%;
+        transform: translateX(-80%);
+        width: 20%;
+        height: 20%;
+    }
+
     .welcomeOffer__box:nth-child(2n) {
         grid-template: auto / 1fr;
         @mixin leftTextBox {
@@ -158,6 +184,10 @@
                 background-color: $color--pink;
                 transform: rotate(45deg);
             }
+        }
+
+        .welcomeOffer__grid {
+            display: none;
         }
 
         .welcomeOffer__header {

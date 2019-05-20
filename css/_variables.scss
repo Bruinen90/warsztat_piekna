@@ -1,6 +1,9 @@
 $color--black: #000;
 $color--pink: #e71682;
 $color--gray: #777;
+$color--light--gray: #d5d5d5;
+$color--medium--gray: #95989a;
+$color--orange: #f89808;
 
 $shadow-medium: rgba(0,0,0,.3);
 
@@ -29,4 +32,33 @@ $font--second: 'Roboto';
         content: " ";
         position: absolute;
     }
+}
+
+@mixin pseudoQuot {
+    content: " ";
+    position: absolute;
+    width: 6px;
+    height: 4px;
+    border: 1px solid $color--light--gray;
+    border-top: 0;
+    border-bottom: 0;
+    transform: skewX(-45deg);
+}
+
+@mixin pseudoCircle {
+    content: " ";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 1px solid $color--light--gray;
+    border-radius: 50%;
+}
+
+@mixin pseudoRotatedLine {
+    content: " ";
+    position: absolute;
+    width: 1px;
+    background-color: $color--light--gray;
+    transform-origin: left bottom;
+    transform: rotate(45deg);
 }

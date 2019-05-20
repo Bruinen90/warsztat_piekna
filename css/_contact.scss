@@ -66,6 +66,17 @@
     color: $color--pink;
 }
 
+.contact__contactData {
+    margin-bottom: 120px;
+    position: relative;
+    &:after {
+        @include pseudoRotatedLine;
+        bottom: -90px;
+        left: 0;
+        height: 70px;
+    }
+}
+
 .contact__email {
     font-size: 23px;
     color: $color--pink;
@@ -103,6 +114,15 @@
 }
 
 @media (min-width: $desktop--min--width) {
+    .contact {
+        position: relative;
+        &:before {
+            @include pseudoRotatedLine;
+            right: 90px;
+            top: 75px;
+            height: 100px;
+        }
+    }
     .contact__smallHeader {
         font-size: 40px;
         &:after {
@@ -111,6 +131,11 @@
             height: 4px;
             bottom: 2px;
             z-index: -1;
+        }
+        &:before {
+            @include pseudoCircle;
+            right: -150px;
+            top: 60px;
         }
     }
 
@@ -135,6 +160,11 @@
         text-align: left;
         font-size: 1.5vw;
         position: relative;
+        &:before {
+            @include pseudoCircle;
+            left: -120px;
+            bottom: -30px;
+        }
         &:after {
             content: " ";
             position: absolute;
@@ -157,8 +187,12 @@
 
     .contact__contactData {
         align-self: end;
+        margin: 0;
         padding-bottom: 30px;
         text-align: right;
+        &:after {
+            display: none;
+        }
     }
 
     .contact__imgCont {
@@ -181,6 +215,15 @@
 
     .contact__text {
         padding: 0;
+        &:last-child {
+            position: relative;
+            &:after {
+                @include pseudoRotatedLine;
+                height: 60px;
+                left: -90px;
+                bottom: 0;
+            }
+        }
     }
 
     .contact__text.capitalized {
@@ -190,5 +233,21 @@
     .contact__text--bold {
         margin: 0;
         padding-right: 60px;
+        position: relative;
+        &:before {
+            @include pseudoCircle;
+            right: 120px;
+            top: -90px;
+            width: 24px;
+            height: 24px;
+            border-color: $color--pink;
+        }
+        &:after {
+            @include pseudoRotatedLine;
+            left: -120px;
+            bottom: 1rem;
+            height: 75px;
+            background-color: $color--orange;
+        }
     }
 }

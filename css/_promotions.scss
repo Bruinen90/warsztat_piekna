@@ -1,5 +1,17 @@
 .promotions {
     margin: 90px 0;
+    position: relative;
+    &:before {
+        content: " ";
+        position: absolute;
+        top: -60px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        height: 30px;
+        width: 1px;
+        background-color: #000;
+    }
 }
 
 .promotions__hero {
@@ -94,7 +106,40 @@
 
 @media (min-width: $desktop--min--width) {
     .promotions {
-        margin-top: 300px;
+        margin-top: 400px;
+        &:before {
+            height: 150px;
+            top: -300px;
+        }
+        &:after {
+            @include pseudoQuot;
+            left: 0;
+            right: 0;
+            top: -60px;
+            border-color: #000;
+            width: 25px;
+            height: 20px;
+            margin: auto;
+        }
+    }
+
+    .promotions__hero {
+        position: relative;
+        &:before {
+            @include pseudoCircle;
+            left: 15%;
+            top: -250px;
+            width: 2.6vw;
+            height: 2.6vw;
+        }
+        &:after {
+            @include pseudoCircle;
+            right: 5%;
+            top: -60px;
+            border-color: $color--orange;
+            width: 1.3vw;
+            height: 1.3vw;
+        }
     }
 
     .promotions__heroText {
@@ -107,6 +152,20 @@
 
     .promotions__imgCont {
         margin-top: -200px;
+        position: relative;
+        &:before {
+            @include pseudoCircle;
+            border-color: $color--pink;
+            left: 60%;
+            bottom: -120px;
+        }
+        &:after {
+            @include pseudoRotatedLine;
+            left: 21%;
+            bottom: -8%;
+            height: 20%;
+            background-color: $color--medium--gray;
+        }
     }
 
     .promotions__currentCont {
@@ -115,7 +174,24 @@
     }
 
     .promotions__header {
+        margin-top: 200px;
         font-size: 110px;
+        position: relative;
+        &:before {
+            @include pseudoRotatedLine;
+            background-color: $color--pink;
+            height: 3vw;
+            max-height: 50px;
+            right: 20%;
+            bottom: 0;
+        }
+        &:after {
+            @include pseudoCircle;
+            bottom: 0;
+            right: 0;
+            width: 23px / 1920px * 100vw;
+            height: 23px/ 1920px * 100vw;
+        }
     }
 
     .promotions__header--withUnderline {

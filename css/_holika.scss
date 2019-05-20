@@ -1,5 +1,16 @@
 .holika {
     text-align: center;
+    position: relative;
+    &:before {
+        content: " ";
+        position: absolute;
+        right: 5px;
+        top: -60px;
+        border: 1px solid $color--light--gray;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
 }
 
 .holika__smallHeader {
@@ -15,20 +26,41 @@
     border-bottom: 1px solid #d5d5d5;
 }
 
-.holika_imgCont {
+.holika_images {
     width: 100%;
     position: relative;
     height: 311px;
-    overflow: hidden;
     margin-bottom: 60px;
+    &:before {
+        @include pseudoQuot;
+        right: 8px;
+        top: 16px;
+    }
+    &:after {
+        @include pseudoCircle;
+        bottom: 20%;
+        left: 7.5%;
+        width: 10px;
+        height: 10px;
+    }
 }
 
-.holika__img {
+.holika__imgCont {
     width: 70%;
     position: absolute;
     &:first-child {
         left: 0;
         top: 0;
+        &:before {
+            content: " ";
+            position: absolute;
+            left: 25%;
+            top: 0;
+            transform: rotate(45deg) translateY(-66%);
+            width: 2px;
+            height: 60px;
+            background-color: $color--pink;
+        }
     }
 
     &:nth-child(2n) {
@@ -37,12 +69,29 @@
     }
 }
 
+.holika__img {
+    width: 100%;
+}
+
 @media (min-width: $desktop--min--width) {
+    .holika:before {
+        top: 60px;
+        right: 120px;
+    }
+
     .holika__smallHeader {
         font-size: 36px;
         padding-bottom: 60px;
         margin-bottom: 0;
         position: relative;
+        display: inline-block;
+        &:before {
+            @include pseudoQuot;
+            left: -90px;
+            top: -15px;
+            width: 16px;
+            height: 12px;
+        }
         &:after {
             content: " ";
             position: absolute;
@@ -56,23 +105,55 @@
         }
     }
 
+    .holika__logoCont {
+        width: 600px;
+        margin: 120px auto;
+        position: relative;
+        &:before {
+            @include pseudoCircle;
+            left: calc(-25vw + 150px);
+            top: 30px;
+        }
+    }
+
     .holika__logo {
+        width: 100%;
         border: 0;
         padding: 0;
-        width: 600px;
-        margin: 120px 0;
     }
 
-    .holika_imgCont {
+    .holika__logoGrid {
+        position: absolute;
+        right: calc(-25vw + 150px);
+        top: 20%;
+    }
+
+    .holika_images {
         height: 45vw;
-        max-height: 648px;
+        max-height: 860px;
+        &:before {
+            width: 25px;
+            height: 25px;
+            right: 25%;
+        }
+        &:after {
+            width: 1px;
+            height: 60px;
+            border: 0;
+            background-color: $color--light--gray;
+            border-radius: 0;
+            transform: rotate(45deg);
+            left: 30%;
+            bottom: 0;
+        }
     }
 
-    .holika__img {
+    .holika__imgCont {
         width: 55%;
     }
 
     .holika__makeAppointmentCont {
-        margin: -120px 0 0 120px;
+        margin: 0 0 0 120px;
+        transform: translateY(-70%);
     }
 }

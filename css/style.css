@@ -185,6 +185,10 @@ a {
     background-color: #fff;
   }
 
+  .menu__item--pink:hover {
+    color: #f89808;
+  }
+
   .menu__item--active {
     pointer-events: none;
   }

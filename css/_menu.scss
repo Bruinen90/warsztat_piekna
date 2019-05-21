@@ -80,6 +80,10 @@
         background-color: #fff;
     }
 
+    .menu__item--pink:hover {
+        color: $color--orange;
+    }
+
     .menu__item--active {
         pointer-events: none;
     }

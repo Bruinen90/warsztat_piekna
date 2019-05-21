@@ -185,6 +185,10 @@ a {
     background-color: #fff;
   }
 
+  .menu__item--active {
+    pointer-events: none;
+  }
+
   .menu__link {
     width: 100%;
     height: 100%;

@@ -26,6 +26,10 @@
     border-bottom: 1px solid #d5d5d5;
 }
 
+.holika__logoGrid {
+    display: none;
+}
+
 .holika_images {
     width: 100%;
     position: relative;
@@ -123,6 +127,7 @@
     }
 
     .holika__logoGrid {
+        display: block;
         position: absolute;
         right: calc(-25vw + 150px);
         top: 20%;

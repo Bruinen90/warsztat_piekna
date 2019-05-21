@@ -1,0 +1,178 @@
+.offer__headerCont {
+    width: 100%;
+    text-align: center;
+}
+
+.offer__header {
+    font-size: 36px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    &:after {
+        content: " ";
+        position: absolute;
+        right: -5%;
+        bottom: 6px;
+        height: 3px;
+        width: 25%;
+        z-index: -1;
+        background-color: $color--pink;
+    }
+}
+
+.offer__box {
+    margin-bottom: 90px;
+}
+
+.offer__boxTitleCont {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.offer__number {
+    padding-right: 15px;
+    font-size: 48px;
+    font-family: $font--second;
+}
+
+.offer__boxTitle {
+    width: 50%;
+    font-size: 22px;
+}
+
+.offer__imgCont {
+    position: relative;
+}
+
+.offer__grid {
+    display: none;
+}
+
+.offer__img {
+    width: 100%;
+}
+
+.offer__description {
+    padding: 15px;
+    line-height: 1.5em;
+}
+
+.offer__listsCont {
+    padding: 15px;
+}
+
+.offer__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.offer__listHeader {
+    font-size: 1em;
+}
+
+.offer__listItem {
+    background: url('../img/icons/bullet.svg') no-repeat left 4px;
+    background-size: .8rem;
+    padding-left: 30px;
+    margin-bottom: 20px;
+}
+
+@media (min-width: $desktop--min--width) {
+    .offer {
+        font-size: 24px;
+    }
+
+    .offer__header {
+        font-size: 48px;
+        &:after {
+            height: 5px;
+            bottom: 9px;
+        }
+    }
+
+    .offer__box {
+        margin-bottom: 120px;
+    }
+
+    .offer__boxTitleCont {
+        padding: 0;
+        max-width: 500px;
+        position: relative;
+        &:before {
+            @include pseudoQuot;
+            left: -47px;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .offer__number {
+        font-size: 72px;
+    }
+
+    .offer__boxTitle {
+        font-size: 30px;
+        margin: 0;
+    }
+
+    .offer__imgCont {
+        float: left;
+        padding: 60px;
+        padding-left: 0;
+        width: 45%;
+        &:after {
+            @include pseudoRotatedLine;
+            bottom: 30px;
+            left: 35%;
+            height: 75px;
+            background-color: $color--pink;
+        }
+    }
+
+    .offer__grid {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 38%;
+        transform: translateX(-80%);
+        width: 15%;
+        height: 15%;
+    }
+
+    .offer__listsCont {
+        display: grid;
+        grid-template: auto / repeat(2, 1fr);
+        grid-gap: 60px;
+        clear: both;
+    }
+
+    .offer__listItem {
+        margin-bottom: 30px;
+        background-position: left .8rem;
+    }
+}
+
+@media (min-width: $big--desktop--min--width) {
+    .offer {
+        font-size: 32px;
+    }
+
+    .offer__header {
+        font-size: 60px;
+        &:after {
+            height: 6px;
+            bottom: 12px;
+        }
+    }
+
+    .offer__number {
+        font-size: 100px;
+    }
+
+    .offer__boxTitle {
+        font-size: 40px;
+    }
+}

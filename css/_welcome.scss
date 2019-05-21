@@ -49,6 +49,12 @@
 
 .welcome__linkCont {
     padding: 30px;
+    div {
+        margin-top: 30px;
+    }
+    div:first-child {
+        margin: 0;
+    }
 }
 
 @media (min-width: $desktop--min--width) {
@@ -72,7 +78,7 @@
     }
 
     .welcome__textCont {
-        width: 66%;
+        width: 72%;
         margin-right: -17.5%;
         position: relative;
         &:before, &:after {
@@ -92,16 +98,16 @@
     }
 
     .welcome__header {
-        font-size: 4.75vw;
+        font-size: 54px;
         margin: 0;
         padding-bottom: 0;
     }
 
     .welcome__withUnderline::after {
-        bottom: .80vw;
+        bottom: 9px;
         z-index: -1;
-        height: .5vw;
-        width: 35%;
+        height: 5px;
+        width: 33%;
     }
 
     .welcome__text {
@@ -122,9 +128,17 @@
 }
 
 @media (min-width: $big--desktop--min--width) {
+    .welcome__withUnderline:after {
+        bottom: 15px;
+        width: 35%;
+    }
     .welcome__textCont {
-        width: 40%;
-        margin-right: -7.5%;
+        width: 60%;
+        margin-right: -16%;
+    }
+
+    .welcome__text {
+        width: 60%;
     }
 
     .welcome__textCont {
@@ -134,6 +148,6 @@
     }
 
     .welcome__header {
-        font-size: 4vw;
+        font-size: 80px;
     }
 }

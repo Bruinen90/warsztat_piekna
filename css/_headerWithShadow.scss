@@ -28,6 +28,7 @@
         height: 2px;
         width: 100%;
         background-color: $color--pink;
+        z-index: -1;
     }
 }
 
@@ -40,5 +41,11 @@
             font-size: 137px;
             line-height: 200px;
         }
+    }
+
+    .headerWithShadow__withUnderline:after {
+        height: 5px;
+        bottom: 6px;
+        width: 90%;
     }
 }

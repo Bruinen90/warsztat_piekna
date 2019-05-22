@@ -5,6 +5,7 @@
 
 body {
     padding: 0;
+    padding-top: 100px; //for mobile navbar
     margin: 0;
 }
 
@@ -33,6 +34,16 @@ a {
 }
 
 @media (min-width: $desktop--min--width) {
+    body {
+        padding-top: 0;
+    }
+
+    .global__content {
+        padding: 0 60px;
+    }
+}
+
+@media (min-width: $big--desktop--min--width) {
     .global__content {
         padding: 0 120px;
     }

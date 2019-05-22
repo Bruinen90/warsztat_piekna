@@ -1,9 +1,14 @@
 .navbar__container {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
     height: 100px;
     padding-left: 30px;
+    background-color: #fff;
+    z-index: 1000;
 }
 
 .navbar__logo {
@@ -56,6 +61,10 @@
 }
 
 @media (min-width: $desktop--min--width) {
+    .navbar__container {
+        position: relative;
+    }
+    
     .navbar__logo {
         width: 20vw;
         max-width: 315px;

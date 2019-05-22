@@ -25,6 +25,8 @@
 @media (min-width: $desktop--min--width) {
     .dotsGrid {
         grid-gap: 22px;
+        width: 100%;
+        height: 100%;
     }
 
     .dotsGrid--pink {

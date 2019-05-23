@@ -69,6 +69,7 @@
     grid-column-end: span 2;
     @include moreLink;
     margin-top: 30px;
+    font-weight: 600;
 }
 
 @media (min-width: $desktop--min--width) {
@@ -97,7 +98,8 @@
         grid-template: auto / 1fr 2fr;
         width: 40%;
         grid-row-gap: 30px;
-
+        padding-bottom: 12%;
+        padding-top: 2%;
         .welcomeOffer__header {
             font-size: 40px;
             grid-row: 1;
@@ -166,6 +168,7 @@
     }
 
     .welcomeOffer__box:nth-child(2n) {
+        padding: 0;
         grid-template: auto / 1fr;
         @mixin leftTextBox {
             margin-left: 20%;

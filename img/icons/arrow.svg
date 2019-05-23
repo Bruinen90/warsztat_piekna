@@ -1,5 +1,69 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg width="17px" height="17px" viewBox="0 0 17 17" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
-  <desc>Created with Lunacy</desc>
-  <path d="M-3.10292e-13 0.0804306L11.019 7.77976e-14L10.9386 11.019" transform="matrix(0.7071068 0.7071067 -0.7071067 0.7071068 8.498779 0.7070923)" id="Path_20-9" fill="none" stroke="#202020" stroke-width="1" />
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="21.759378"
+   height="16.54628"
+   viewBox="0 0 21.759378 16.54628"
+   version="1.1"
+   id="svg863"
+   sodipodi:docname="arrow.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata869">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs867" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="3840"
+     inkscape:window-height="2066"
+     id="namedview865"
+     showgrid="false"
+     inkscape:zoom="28.796875"
+     inkscape:cx="24.332895"
+     inkscape:cy="-9.7779887"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg863" />
+  <desc
+     id="desc858">Created with Lunacy</desc>
+  <g
+     id="Group_29-5"
+     transform="rotate(-90.000003,8.124155,8.164905)"
+     style="stroke:#000000;stroke-width:1.51181102;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+    <path
+       d="M 0.944445,0 V 20.8917"
+       transform="translate(7.071222,0.04075)"
+       id="Path_19-9"
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-width:1.51181102;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       d="M 0,0.0804306 11.019,0 10.9386,11.019"
+       transform="rotate(135,5.2255437,9.7396586)"
+       id="Path_20-9"
+       inkscape:connector-curvature="0"
+       style="fill:none;stroke:#000000;stroke-width:1.51181102;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  </g>
 </svg>

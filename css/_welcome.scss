@@ -101,6 +101,7 @@
         font-size: 54px;
         margin: 0;
         padding-bottom: 0;
+        padding-left: 0;
     }
 
     .welcome__withUnderline::after {
@@ -113,10 +114,12 @@
     .welcome__text {
         width: 70%;
         padding-top: 0;
+        padding-left: 0;
     }
 
     .welcome__linkCont {
         padding-bottom: 0;
+        padding-left: 0;
     }
 
     .welcome__makeAppointmentCont {
@@ -148,6 +151,6 @@
     }
 
     .welcome__header {
-        font-size: 80px;
+        font-size: 90px;
     }
 }

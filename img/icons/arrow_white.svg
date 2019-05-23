@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+<svg width="42px" height="14px" viewBox="0 0 42 14" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
   <desc>Created with Lunacy</desc>
-  <path d="M-5.14458e-13 -1.02901e-12L9.01116 0.0398371L9.051 9.051" transform="matrix(0.7071068 0.7071067 -0.7071067 0.7071068 7.814209 1.414185)" id="Path_20-8" fill="none" stroke="#FFFFFF" stroke-width="2" />
+  <g id="Group_14" transform="matrix(-4.371139E-08 -1 1 -4.371139E-08 0 14)">
+    <path d="M0.5 0L0.5 40.6857" transform="translate(6.157 0.4955986)" id="Path_19-8" fill="none" stroke="#FFFFFF" stroke-width="2" />
+    <path d="M-5.14458e-13 -1.02901e-12L9.01116 0.0398371L9.051 9.051" transform="matrix(-0.7071068 0.7071068 -0.7071068 -0.7071068 13.058 34.6027)" id="Path_20-8" fill="none" stroke="#FFFFFF" stroke-width="2" />
+  </g>
 </svg>

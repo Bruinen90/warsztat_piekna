@@ -185,9 +185,9 @@ function initMap() {
 
     const map = new google.maps.Map(document.querySelector('.contact__mapCont'), mapParams);
 
-    let markerSize = new google.maps.Size(75, 125);
+    let markerSize = new google.maps.Size(40, 65);
     if(window.innerWidth < 769) {
-        markerSize = new google.maps.Size(50, 70)
+        markerSize = new google.maps.Size(30, 40)
     }
 
     const marker = new google.maps.Marker({

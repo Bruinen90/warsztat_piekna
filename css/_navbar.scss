@@ -27,8 +27,9 @@
 }
 
 .navbar__menuToggler {
+    // border: 1px solid gray;
     width: 40px;
-    height: 30px;
+    height: 25px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -36,27 +37,29 @@
 
 .navbar__menuBar {
     width: 75%;
-    height: 3px;
+    height: 2px;
     background-color: #fff;
     transition: all .25s ease-out;
-    transform-origin: left top;
+    transform-origin: left center;
     &:nth-child(2n) {
         width: 100%;
     }
 }
 
 .navbar__menuToggler--active {
+    width: 40px;
+    height: 40px;
     .navbar__menuBar:nth-child(2n) {
         opacity: 0;
     }
     .navbar__menuBar:first-child {
-        transform: rotate(45deg) translateY(-5px);
-        width: 48px;
+        transform: rotate(45deg);
+        width: 38px * 1.41;
     }
 
     .navbar__menuBar:last-child {
-        transform: rotate(-45deg) translateY(5px);
-        width: 48px;
+        transform: rotate(-45deg);
+        width: 38px * 1.41;
     }
 }
 
@@ -64,7 +67,7 @@
     .navbar__container {
         position: relative;
     }
-    
+
     .navbar__logo {
         width: 20vw;
         max-width: 315px;

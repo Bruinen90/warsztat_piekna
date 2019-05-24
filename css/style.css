@@ -111,14 +111,20 @@ a {
   width: 53.58px;
 }
 
+@media (min-width: 568px) {
+  .navbar__logo {
+    width: 33%;
+  }
+}
 @media (min-width: 960px) {
   .navbar__container {
     position: relative;
+    padding: 0;
   }
 
   .navbar__logo {
-    width: 20vw;
-    max-width: 315px;
+    width: 17%;
+    max-width: 285px;
     margin-bottom: -60px;
   }
 
@@ -192,6 +198,20 @@ a {
   right: 0;
 }
 
+@media (min-width: 568px) {
+  .menu__list {
+    font-size: 19px;
+    padding: 45px;
+  }
+
+  .menu__item {
+    margin-bottom: 30px;
+  }
+
+  .menu__subItem {
+    margin-bottom: 20px;
+  }
+}
 @media (min-width: 960px) {
   .menu__container {
     position: relative;
@@ -211,7 +231,6 @@ a {
     color: #000;
     padding: 0;
     height: 100%;
-    font-size: 19px;
   }
 
   .menu__item {
@@ -269,14 +288,14 @@ a {
   }
 
   .menu__item:hover .menu__subMenuCont {
-    transform: translateY(100%);
+    transform: translateY(100%) scaleY(1);
     opacity: 1;
   }
 
   .menu__subMenuCont {
     position: absolute;
     bottom: 0;
-    transform: translateY(-100%);
+    transform: translateY(100%) scaleY(0);
     opacity: 0;
     right: 0;
     width: 75vw;
@@ -287,7 +306,7 @@ a {
     justify-content: space-between;
     background-color: #fff;
     z-index: 10;
-    transition: all 0.25s 0.25s ease-out;
+    transition: all 0.25s 0s ease-out;
   }
 
   .menu__subMenu {
@@ -318,18 +337,13 @@ a {
   }
 
   .menu__subItem--special {
-    font-weight: bold;
+    font-weight: 600;
     color: #e71682;
     background: url("../img/icons/pink_arrow.svg") no-repeat right center;
   }
 
   .menu__contact--mobile {
     display: none;
-  }
-}
-@media (min-width: 1600px) {
-  .menu__list {
-    font-size: 22px;
   }
 }
 .welcome__container {
@@ -345,7 +359,7 @@ a {
 }
 
 .welcome__hero {
-  height: 260px;
+  max-height: 260px;
 }
 
 .welcome__header {
@@ -391,6 +405,17 @@ a {
   margin: 0;
 }
 
+@media (min-width: 568px) {
+  .welcome__hero {
+    width: 100%;
+    height: auto;
+    max-height: 100vh;
+  }
+
+  .welcome__header {
+    height: 450px;
+  }
+}
 @media (min-width: 960px) {
   .welcome__container {
     display: flex;
@@ -403,6 +428,7 @@ a {
   .welcome__heroCont {
     position: relative;
     align-self: flex-start;
+    text-align: right;
   }
 
   .welcome__hero {
@@ -442,6 +468,10 @@ a {
     z-index: -1;
     height: 5px;
     width: 33%;
+  }
+
+  .welcome__headerSub {
+    font-size: 0.85em;
   }
 
   .welcome__text {
@@ -574,6 +604,27 @@ a {
   height: 4px;
 }
 
+@media (min-width: 568px) {
+  .vividSection__container--low {
+    max-height: 25vh;
+  }
+  .vividSection__container--low .vividSection__inner {
+    padding: 30px;
+  }
+  .vividSection__container--low .vividSection__linkText {
+    font-size: 22px;
+  }
+  .vividSection__container--low .vividSection__arrow {
+    width: 15%;
+  }
+  .vividSection__container--low .vividSection__dotsCont .dotsGrid {
+    grid-gap: 30px;
+  }
+  .vividSection__container--low .vividSection__dotsCont .dotsGrid__dot {
+    width: 5px;
+    height: 5px;
+  }
+}
 @media (min-width: 960px) {
   .vividSection__container {
     width: 180px;
@@ -1351,8 +1402,8 @@ a {
 
   .contact__mapCont {
     height: 50vh;
-    margin-left: -120px;
-    width: calc(100% + 240px);
+    margin-left: -60px;
+    width: calc(100% + 120px);
   }
 
   .contact__infoCont {
@@ -1481,6 +1532,12 @@ a {
     bottom: 1rem;
     height: 75px;
     background-color: #f89808;
+  }
+}
+@media (min-width: 1600px) {
+  .contact__mapCont {
+    margin-left: -120px;
+    width: calc(100% + 240px);
   }
 }
 .promotions {

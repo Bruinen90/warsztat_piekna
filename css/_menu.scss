@@ -64,6 +64,20 @@
     right: 0;
 }
 
+@media (min-width: $tablet--min--width) {
+  .menu__list {
+    font-size: 19px;
+    padding: 45px;
+  }
+  .menu__item {
+    margin-bottom: 30px;
+  }
+
+  .menu__subItem {
+    margin-bottom: 20px;
+  }
+}
+
 @media (min-width: $desktop--min--width) {
     .menu__container {
         position: relative;
@@ -83,7 +97,6 @@
         color: #000;
         padding: 0;
         height: 100%;
-        font-size: 19px;
     }
 
     .menu__item {
@@ -142,7 +155,7 @@
 
     .menu__item:hover{
         .menu__subMenuCont {
-            transform: translateY(100%);
+            transform: translateY(100%) scaleY(1);
             opacity: 1;
         }
     }
@@ -150,7 +163,7 @@
     .menu__subMenuCont {
         position: absolute;
         bottom: 0;
-        transform: translateY(-100%);
+        transform: translateY(100%) scaleY(0);
         opacity: 0;
         right: 0;
         width: 75vw;
@@ -161,7 +174,7 @@
         justify-content: space-between;
         background-color: #fff;
         z-index: 10;
-        transition: all .25s .25s ease-out;
+        transition: all .25s 0s ease-out;
     }
 
     .menu__subMenu {
@@ -192,18 +205,12 @@
     }
 
     .menu__subItem--special {
-        font-weight: bold;
+        font-weight: 600;
         color: $color--pink;
         background: url('../img/icons/pink_arrow.svg') no-repeat right center;
     }
 
     .menu__contact--mobile {
         display: none;
-    }
-}
-
-@media (min-width: $big--desktop--min--width) {
-    .menu__list {
-        font-size: 22px;
     }
 }

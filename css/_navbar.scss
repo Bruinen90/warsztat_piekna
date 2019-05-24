@@ -63,14 +63,21 @@
     }
 }
 
+@media (min-width: $tablet--min--width) {
+    .navbar__logo {
+        width: 33%;
+    }
+}
+
 @media (min-width: $desktop--min--width) {
     .navbar__container {
         position: relative;
+        padding: 0;
     }
 
     .navbar__logo {
-        width: 20vw;
-        max-width: 315px;
+        width: 17%;
+        max-width: 285px;
         margin-bottom: -60px;
     }
 

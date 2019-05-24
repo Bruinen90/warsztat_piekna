@@ -75,6 +75,30 @@
     }
 }
 
+@media (min-width: $tablet--min--width) {
+  .vividSection__container--low {
+      max-height: 25vh;
+      .vividSection__inner {
+          padding: 30px;
+      }
+      .vividSection__linkText {
+          font-size: 22px;
+      }
+      .vividSection__arrow {
+          width: 15%;
+      }
+      .vividSection__dotsCont {
+          .dotsGrid {
+              grid-gap: 30px;
+          }
+          .dotsGrid__dot {
+              width: 5px;
+              height: 5px;
+          }
+      }
+  }
+}
+
 @media (min-width: $desktop--min--width) {
     .vividSection__container {
         width: 180px;

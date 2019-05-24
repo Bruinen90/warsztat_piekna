@@ -141,8 +141,8 @@
 
     .contact__mapCont {
         height: 50vh;
-        margin-left: -120px;
-        width: calc(100% + 240px);
+        margin-left: -60px;
+        width: calc(100% + 120px);
     }
 
     .contact__infoCont {
@@ -252,4 +252,11 @@
             background-color: $color--orange;
         }
     }
+}
+
+@media (min-width: $big--desktop--min--width) {
+  .contact__mapCont {
+    margin-left: -120px;
+    width: calc(100% + 240px);
+  }
 }

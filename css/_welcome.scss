@@ -11,7 +11,8 @@
 }
 
 .welcome__hero {
-    height: 260px;
+    // width: 100%;
+    max-height: 260px;
 }
 
 .welcome__header {
@@ -57,6 +58,18 @@
     }
 }
 
+@media (min-width: $tablet--min--width) {
+    .welcome__hero {
+        width: 100%;
+        height: auto;
+        max-height: 100vh;
+    }
+
+    .welcome__header {
+        height: 450px;
+    }
+}
+
 @media (min-width: $desktop--min--width) {
     .welcome__container {
         display: flex;
@@ -69,6 +82,7 @@
     .welcome__heroCont {
         position: relative;
         align-self: flex-start;
+        text-align: right;
     }
 
     .welcome__hero {
@@ -109,6 +123,10 @@
         z-index: -1;
         height: 5px;
         width: 33%;
+    }
+
+    .welcome__headerSub {
+      font-size: .85em;
     }
 
     .welcome__text {

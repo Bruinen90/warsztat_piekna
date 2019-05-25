@@ -78,6 +78,9 @@
 @media (min-width: $tablet--min--width) {
   .vividSection__container--low {
       max-height: 25vh;
+      &:before {
+          display: none;
+      }
       .vividSection__inner {
           padding: 30px;
       }
@@ -88,13 +91,7 @@
           width: 15%;
       }
       .vividSection__dotsCont {
-          .dotsGrid {
-              grid-gap: 30px;
-          }
-          .dotsGrid__dot {
-              width: 5px;
-              height: 5px;
-          }
+          transform: scale(.75);
       }
   }
 }

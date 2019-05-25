@@ -13,6 +13,8 @@ $big--desktop--min--width: 1600px;
 
 $font--second: 'Roboto';
 
+$slide--duration: 4s;
+
 @mixin moreLink {
     display: flex;
     justify-content: space-between;
@@ -62,4 +64,28 @@ $font--second: 'Roboto';
     background-color: $color--light--gray;
     transform-origin: left bottom;
     transform: rotate(45deg);
+}
+
+@keyframes zoomIn {
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes floatLeft {
+    from {
+        transform: translateY(-15px);
+    }
+    to {
+        transform: translateY(5px);
+    }
+}
+
+@keyframes floatRight {
+    from {
+        transform: translateY(10px);
+    }
+    to {
+        transform: translateY(5px);
+    }
 }

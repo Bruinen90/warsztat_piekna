@@ -1,5 +1,31 @@
 .welcome__container {
     position: relative;
+    overflow: hidden;
+    width: auto;
+}
+
+.welcome__slidesCont {
+    display: flex;
+    // justify-content: space-between;
+    transition: transform .5s ease-out;
+}
+
+.welcome__sliderBox {
+    width: 100%;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.welcome__sliderBox--active {
+    .welcome__hero {
+        animation: zoomIn $slide--duration ease-out forwards;
+    }
+    .welcome__withUnderline {
+        animation: floatLeft $slide--duration ease-out forwards;
+    }
+    .welcome__headerSub {
+        animation: floatRight $slide--duration ease-out forwards;
+    }
 }
 
 .welcome__heroCont {
@@ -11,7 +37,6 @@
 }
 
 .welcome__hero {
-    // width: 100%;
     max-height: 260px;
 }
 
@@ -46,6 +71,8 @@
     font-weight: 400;
     padding: 30px;
     padding-right: 45px;
+    height: 160px;
+    overflow: auto;
 }
 
 .welcome__linkCont {
@@ -56,6 +83,11 @@
     div:first-child {
         margin: 0;
     }
+}
+
+.welcome__makeAppointmentCont {
+    height: 250px;
+    flex: 0;
 }
 
 @media (min-width: $tablet--min--width) {
@@ -72,11 +104,19 @@
 
 @media (min-width: $desktop--min--width) {
     .welcome__container {
+        overflow: hidden;
+    }
+
+    .welcome__slidesCont {
+        padding-bottom: calc(25vh + 120px);
+    }
+
+    .welcome__sliderBox {
         display: flex;
         align-items: flex-end;
         flex-direction: row-reverse;
         width: 100%;
-        margin-bottom: calc(25vh + 120px);
+        padding-left: 2px;
     }
 
     .welcome__heroCont {
@@ -95,19 +135,33 @@
         width: 72%;
         margin-right: -17.5%;
         position: relative;
-        &:before, &:after {
+    }
+
+    .welcome__loadingBar {
+        position: absolute;
+        left: 0;
+        bottom: 25vh;
+        width: 375px;
+        height: 2px;
+        background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0, #202020 0);
+        background-position: -375px 0;
+        background-repeat: no-repeat;
+        animation: load $slide--duration ease-in infinite;
+        &:after {
             content: " ";
             position: absolute;
             left: 0;
-            bottom: -60px;
-            width: 42%;
-            height: 2px;
-            background-color: #202020;
-        }
-
-        &:after {
-            left: 42%;
+            top: 0;
+            width: 100%;
+            height: 1px;
             background-color: #d5d5d5;
+            z-index: -1;
+        }
+    }
+
+    @keyframes load {
+        to {
+            background-position: 0 0;
         }
     }
 
@@ -116,6 +170,7 @@
         margin: 0;
         padding-bottom: 0;
         padding-left: 0;
+        height: auto;
     }
 
     .welcome__withUnderline::after {
@@ -145,10 +200,16 @@
         right: 15%;
         bottom: 0;
         transform: translateY(50%);
+        height: auto;
     }
 }
 
 @media (min-width: $big--desktop--min--width) {
+    .welcome__loadingBar {
+        width: 450px;
+        background-position: -450px 0;
+    }
+
     .welcome__withUnderline:after {
         bottom: 15px;
         width: 35%;

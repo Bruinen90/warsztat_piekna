@@ -1,36 +1,25 @@
-const sectionsArr = document.querySelectorAll('section');
-const arrowUp = document.querySelector('.slider__arrow--up');
-const arrowDown = document.querySelector('.slider__arrow--down');
+const allSlides = document.querySelectorAll('.welcome__sliderBox');
+let currentSlide = 0;
+const slidesContainer = document.querySelector('.welcome__slidesCont')
 
-// Create bullets for each <section> element
-const bulletsCont = document.querySelector('.slider__bulletsCont');
-const bulletsHTML = [...sectionsArr]
-    .map((section, index) => `<div class="slider__bullet" onClick="goToSection(${index})"></div>`);
-bulletsCont.innerHTML = bulletsHTML.join('');
-const allBullets = document.querySelectorAll('.slider__bullet');
-const goToSection = (index)=> {
-    if(index >= 0 && index < sectionsArr.length)
-    sectionsArr[index].scrollIntoView({behavior: 'smooth'});
-}
-
-let currSection = 0;
-
-const checkCurrentSection = () => {
-    [...sectionsArr].forEach((section, index) => {
-        const cords = section.getBoundingClientRect();
-        if(
-            cords.bottom - window.innerHeight/2 >= 0 &&
-            cords.top <= window.innerHeight/2
-        ) {
-            currSection = index;
-            allBullets.
-                forEach(bullet => bullet.classList.remove('slider__bullet--active'));
-            allBullets[index].classList.add('slider__bullet--active')
-        };
+const changeSlide = (nextSlideNum) => {
+    let slideToShow = nextSlideNum;
+    if(nextSlideNum >= allSlides.length) {
+        slideToShow = 0;
+    } else if(nextSlideNum < 0) {
+        slideToShow = allSlides.length
+    }
+    allSlides.forEach((slide, index) => {
+        slide.classList.remove('welcome__sliderBox--active');
+        if(index === slideToShow) {
+            slide.classList.add('welcome__sliderBox--active');
+        }
     });
+    slidesContainer.style.transform = `translateX(${-slideToShow * 100}%)`
+    currentSlide = slideToShow;
+    console.log(currentSlide)
 }
 
-document.addEventListener('scroll', checkCurrentSection);
-window.addEventListener('load', checkCurrentSection);
-arrowUp.addEventListener('click', ()=>goToSection(currSection -1));
-arrowDown.addEventListener('click', ()=>goToSection(currSection +1));
+const startSlideShow = () => setInterval(()=>changeSlide(currentSlide+1), 4000);
+
+startSlideShow()

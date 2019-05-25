@@ -1,3 +1,24 @@
+@keyframes zoomIn {
+  to {
+    transform: scale(1.1);
+  }
+}
+@keyframes floatLeft {
+  from {
+    transform: translateY(-15px);
+  }
+  to {
+    transform: translateY(5px);
+  }
+}
+@keyframes floatRight {
+  from {
+    transform: translateY(10px);
+  }
+  to {
+    transform: translateY(5px);
+  }
+}
 * {
   box-sizing: border-box;
   font-family: Raleway;
@@ -146,6 +167,12 @@ a {
   transform: translateY(0);
 }
 
+.menu__scrollable {
+  height: 100%;
+  background-color: #000;
+  overflow: auto;
+}
+
 .menu__subMenu--desktop, .menu__subHeader {
   display: none;
 }
@@ -153,7 +180,6 @@ a {
 .menu__list {
   width: 100%;
   height: 100%;
-  background-color: #000;
   margin: 0;
   color: #fff;
   list-style: none;
@@ -336,6 +362,10 @@ a {
     grid-auto-flow: column;
   }
 
+  .menu__subItem {
+    margin: 0;
+  }
+
   .menu__subItem--special {
     font-weight: 600;
     color: #e71682;
@@ -348,6 +378,29 @@ a {
 }
 .welcome__container {
   position: relative;
+  overflow: hidden;
+  width: auto;
+}
+
+.welcome__slidesCont {
+  display: flex;
+  transition: transform 0.5s ease-out;
+}
+
+.welcome__sliderBox {
+  width: 100%;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.welcome__sliderBox--active .welcome__hero {
+  animation: zoomIn 4s ease-out forwards;
+}
+.welcome__sliderBox--active .welcome__withUnderline {
+  animation: floatLeft 4s ease-out forwards;
+}
+.welcome__sliderBox--active .welcome__headerSub {
+  animation: floatRight 4s ease-out forwards;
 }
 
 .welcome__heroCont {
@@ -393,6 +446,8 @@ a {
   font-weight: 400;
   padding: 30px;
   padding-right: 45px;
+  height: 160px;
+  overflow: auto;
 }
 
 .welcome__linkCont {
@@ -403,6 +458,11 @@ a {
 }
 .welcome__linkCont div:first-child {
   margin: 0;
+}
+
+.welcome__makeAppointmentCont {
+  height: 250px;
+  flex: 0;
 }
 
 @media (min-width: 568px) {
@@ -418,11 +478,19 @@ a {
 }
 @media (min-width: 960px) {
   .welcome__container {
+    overflow: hidden;
+  }
+
+  .welcome__slidesCont {
+    padding-bottom: calc(25vh + 120px);
+  }
+
+  .welcome__sliderBox {
     display: flex;
     align-items: flex-end;
     flex-direction: row-reverse;
     width: 100%;
-    margin-bottom: calc(25vh + 120px);
+    padding-left: 2px;
   }
 
   .welcome__heroCont {
@@ -442,25 +510,40 @@ a {
     margin-right: -17.5%;
     position: relative;
   }
-  .welcome__textCont:before, .welcome__textCont:after {
+
+  .welcome__loadingBar {
+    position: absolute;
+    left: 0;
+    bottom: 25vh;
+    width: 375px;
+    height: 2px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, #202020 0);
+    background-position: -375px 0;
+    background-repeat: no-repeat;
+    animation: load 4s ease-in infinite;
+  }
+  .welcome__loadingBar:after {
     content: " ";
     position: absolute;
     left: 0;
-    bottom: -60px;
-    width: 42%;
-    height: 2px;
-    background-color: #202020;
-  }
-  .welcome__textCont:after {
-    left: 42%;
+    top: 0;
+    width: 100%;
+    height: 1px;
     background-color: #d5d5d5;
+    z-index: -1;
   }
 
+  @keyframes load {
+    to {
+      background-position: 0 0;
+    }
+  }
   .welcome__header {
     font-size: 54px;
     margin: 0;
     padding-bottom: 0;
     padding-left: 0;
+    height: auto;
   }
 
   .welcome__withUnderline::after {
@@ -490,9 +573,15 @@ a {
     right: 15%;
     bottom: 0;
     transform: translateY(50%);
+    height: auto;
   }
 }
 @media (min-width: 1600px) {
+  .welcome__loadingBar {
+    width: 450px;
+    background-position: -450px 0;
+  }
+
   .welcome__withUnderline:after {
     bottom: 15px;
     width: 35%;
@@ -608,6 +697,9 @@ a {
   .vividSection__container--low {
     max-height: 25vh;
   }
+  .vividSection__container--low:before {
+    display: none;
+  }
   .vividSection__container--low .vividSection__inner {
     padding: 30px;
   }
@@ -617,12 +709,8 @@ a {
   .vividSection__container--low .vividSection__arrow {
     width: 15%;
   }
-  .vividSection__container--low .vividSection__dotsCont .dotsGrid {
-    grid-gap: 30px;
-  }
-  .vividSection__container--low .vividSection__dotsCont .dotsGrid__dot {
-    width: 5px;
-    height: 5px;
+  .vividSection__container--low .vividSection__dotsCont {
+    transform: scale(0.75);
   }
 }
 @media (min-width: 960px) {
@@ -2031,12 +2119,12 @@ a {
     background-position: left 0.8rem;
   }
 }
-.slider {
+.scrollBar {
   display: none;
 }
 
 @media (min-width: 960px) {
-  .slider {
+  .scrollBar {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -2048,22 +2136,28 @@ a {
     z-index: 1000;
   }
 
-  .slider__container {
+  .scrollBar__container {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .slider__arrow {
+  .scrollBar__arrow {
     width: 10px;
     cursor: pointer;
   }
-
-  .slider__arrow--down {
-    transform: rotate(180deg);
+  .scrollBar__arrow:active {
+    transform: scale(0.9);
   }
 
-  .slider__bulletsCont {
+  .scrollBar__arrow--down {
+    transform: rotate(180deg);
+  }
+  .scrollBar__arrow--down:active {
+    transform: rotate(180deg) scale(0.9);
+  }
+
+  .scrollBar__bulletsCont {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -2071,7 +2165,7 @@ a {
     margin: 45px 0;
   }
 
-  .slider__bullet {
+  .scrollBar__bullet {
     width: 8px;
     height: 17px;
     transform-origin: right;
@@ -2079,37 +2173,37 @@ a {
     position: relative;
     cursor: pointer;
   }
-  .slider__bullet:after {
+  .scrollBar__bullet:after {
     content: " ";
     position: absolute;
     left: 0;
     right: 0;
     top: 50%;
-    border: 1px solid #000;
+    border-top: 1px solid #000;
     transition: all 0.25s ease-out;
     z-index: -1;
   }
 
-  .slider__bullet--active:after {
+  .scrollBar__bullet--active:after {
     border-color: #e71682;
     transform: scaleX(2) translateX(-25%);
   }
 }
 @media (min-width: 1600px) {
-  .slider {
+  .scrollBar {
     width: 120px;
   }
 
-  .slider__arrow {
+  .scrollBar__arrow {
     width: 13px;
   }
 
-  .slider__bullet {
+  .scrollBar__bullet {
     width: 10px;
     height: 21px;
   }
 
-  .slider__bullet--active:after {
+  .scrollBar__bullet--active:after {
     border-color: #e71682;
   }
 }

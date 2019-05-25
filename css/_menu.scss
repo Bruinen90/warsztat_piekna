@@ -12,6 +12,12 @@
     transform: translateY(0);
 }
 
+.menu__scrollable {
+    height: 100%;
+    background-color: $color--black;
+    overflow: auto;
+}
+
 .menu__subMenu--desktop, .menu__subHeader {
     display: none;
 }
@@ -19,7 +25,6 @@
 .menu__list {
     width: 100%;
     height: 100%;
-    background-color: $color--black;
     margin: 0;
     color: #fff;
     list-style: none;
@@ -202,6 +207,10 @@
         grid-template: repeat(4, 1fr) / 1fr 1fr;
         grid-gap: 25px;
         grid-auto-flow: column;
+    }
+
+    .menu__subItem {
+        margin: 0;
     }
 
     .menu__subItem--special {

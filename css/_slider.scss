@@ -1,9 +1,9 @@
-.slider {
+.scrollBar {
     display: none
 }
 
 @media (min-width: $desktop--min--width) {
-    .slider {
+    .scrollBar {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -15,22 +15,28 @@
         z-index: 1000;
     }
 
-    .slider__container {
+    .scrollBar__container {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .slider__arrow {
+    .scrollBar__arrow {
         width: 10px;
         cursor: pointer;
+        &:active {
+            transform: scale(.9);
+        }
     }
 
-    .slider__arrow--down {
+    .scrollBar__arrow--down {
         transform: rotate(180deg);
+        &:active {
+            transform: rotate(180deg) scale(.9);
+        }
     }
 
-    .slider__bulletsCont {
+    .scrollBar__bulletsCont {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -38,7 +44,7 @@
         margin: 45px 0;
     }
 
-    .slider__bullet {
+    .scrollBar__bullet {
         width: 8px;
         height: 17px;
         transform-origin: right;
@@ -51,33 +57,33 @@
             left: 0;
             right: 0;
             top: 50%;
-            border: 1px solid #000;
+            border-top: 1px solid #000;
             transition: all .25s ease-out;
             z-index: -1;
         }
     }
 
-    .slider__bullet--active:after {
+    .scrollBar__bullet--active:after {
         border-color: $color--pink;
         transform: scaleX(2) translateX(-25%);
     }
 }
 
 @media (min-width: $big--desktop--min--width) {
-    .slider {
+    .scrollBar {
         width: 120px;
     }
 
-    .slider__arrow {
+    .scrollBar__arrow {
         width: 13px;
     }
 
-    .slider__bullet {
+    .scrollBar__bullet {
         width: 10px;
         height: 21px;
     }
 
-    .slider__bullet--active:after {
+    .scrollBar__bullet--active:after {
         border-color: $color--pink;
     }
 }

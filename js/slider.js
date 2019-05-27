@@ -17,7 +17,6 @@ const changeSlide = (nextSlideNum) => {
     });
     slidesContainer.style.transform = `translateX(${-slideToShow * 100}%)`
     currentSlide = slideToShow;
-    console.log(currentSlide)
 }
 
 const startSlideShow = () => setInterval(()=>changeSlide(currentSlide+1), 4000);

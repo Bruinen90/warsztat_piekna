@@ -18,13 +18,16 @@
 
 .welcome__sliderBox--active {
     .welcome__hero {
-        animation: zoomIn $slide--duration ease-out forwards;
+        animation: zoomIn $slide--duration+0.5s ease-out forwards;
     }
     .welcome__withUnderline {
-        animation: floatLeft $slide--duration ease-out forwards;
+        animation: floatDown $slide--duration+0.5s ease-out forwards;
+        &:after {
+            animation: floatRight $slide--duration+0.5s ease-out forwards;
+        }
     }
     .welcome__headerSub {
-        animation: floatRight $slide--duration ease-out forwards;
+        animation: floatUp $slide--duration+0.5s ease-out forwards;
     }
 }
 
@@ -103,12 +106,8 @@
 }
 
 @media (min-width: $desktop--min--width) {
-    .welcome__container {
-        overflow: hidden;
-    }
-
     .welcome__slidesCont {
-        padding-bottom: calc(25vh + 120px);
+        padding-bottom: calc(25vh);
     }
 
     .welcome__sliderBox {
@@ -140,7 +139,7 @@
     .welcome__loadingBar {
         position: absolute;
         left: 0;
-        bottom: 25vh;
+        top: calc(100vh - 19%);
         width: 375px;
         height: 2px;
         background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0, #202020 0);
@@ -166,10 +165,11 @@
     }
 
     .welcome__header {
-        font-size: 54px;
+        font-size: 64px;
         margin: 0;
         padding-bottom: 0;
         padding-left: 0;
+        margin-bottom: 30px;
         height: auto;
     }
 
@@ -180,14 +180,11 @@
         width: 33%;
     }
 
-    .welcome__headerSub {
-      font-size: .85em;
-    }
-
     .welcome__text {
-        width: 70%;
-        padding-top: 0;
-        padding-left: 0;
+        width: 50%;
+        padding: 0;
+        height: auto;
+        margin-top: 15px;
     }
 
     .welcome__linkCont {
@@ -231,5 +228,9 @@
 
     .welcome__header {
         font-size: 90px;
+    }
+
+    .welcome__headerSub {
+      font-size: .85em;
     }
 }

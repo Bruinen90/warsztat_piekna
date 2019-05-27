@@ -72,7 +72,7 @@ $slide--duration: 4s;
     }
 }
 
-@keyframes floatLeft {
+@keyframes floatDown {
     from {
         transform: translateY(-15px);
     }
@@ -81,11 +81,17 @@ $slide--duration: 4s;
     }
 }
 
-@keyframes floatRight {
+@keyframes floatUp {
     from {
         transform: translateY(10px);
     }
     to {
         transform: translateY(5px);
+    }
+}
+
+@keyframes floatRight {
+    to {
+        transform: translateX(15px);
     }
 }

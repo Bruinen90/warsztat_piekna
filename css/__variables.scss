@@ -91,7 +91,10 @@ $slide--duration: 4s;
 }
 
 @keyframes floatRight {
+    from {
+        transform: translateX(-10px);
+    }
     to {
-        transform: translateX(15px);
+        transform: translateX(5px);
     }
 }

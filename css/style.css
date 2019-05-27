@@ -20,8 +20,11 @@
   }
 }
 @keyframes floatRight {
+  from {
+    transform: translateX(-10px);
+  }
   to {
-    transform: translateX(15px);
+    transform: translateX(5px);
   }
 }
 * {
@@ -43,6 +46,7 @@ a {
 .global__content {
   margin: auto;
   max-width: 1920px;
+  overflow: hidden;
 }
 
 .bigLetter {
@@ -510,7 +514,7 @@ a {
   }
 
   .welcome__textCont {
-    width: 72%;
+    width: 75%;
     margin-right: -17.5%;
     position: relative;
   }
@@ -543,7 +547,7 @@ a {
     }
   }
   .welcome__header {
-    font-size: 64px;
+    font-size: 60px;
     margin: 0;
     padding-bottom: 0;
     padding-left: 0;
